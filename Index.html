@@ -3,6 +3,7 @@
 
 <head>
     <link href="styles.css" rel="stylesheet" />
+    <link href="resets.css" rel="stylesheet" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -19,74 +20,99 @@
 
         <form id="survey-form">
             <div class="form-group">
-                <label id="name-label">Name<input id="name" type="text" placeholder="Enter Your Name" required/></label>
+                <label id="name-label">Name<input id="name" class="inputs" type="text" placeholder="Enter Your Name" required/></label>
             </div>
             <div class="form-group">
-                <label id="email-label">Email<input id="email" type="email" placeholder="Enter Your Email" required/></label>
+                <label id="email-label">Email<input id="email" class="inputs" type="email" placeholder="Enter Your Email" required/></label>
             </div>
             <div class="form-group">
-                <label id="number-label">Age<input id="number" type="number" placeholder="Age" required min="13" max="120"/></label>
+                <label id="number-label">Age<input id="number" class="inputs" type="number" placeholder="Age" required min="13" max="120"/></label>
             </div>
             <div class="form-group">
-                <label>which option best describes you
-                        <select id="dropdown">
-                            <option>Select Your Current Role</option>
-                            <option>Student</option>
-                            <option>Fulltime Job</option>
-                            <option>Fulltime Learner</option>
-                            <option>Prefer Not to Say</option>
-                            <option>Other</option>
-                        </select>
+                <p>which option best describes you</p>
+                <select id="dropdown" class="inputs">
+                                <option value="" disabled selected>Select Your Current Role</option>
+                                <option value="student">Student</option>
+                                <option value="fulltimeJob">Fulltime Job</option>
+                                <option value="FulltimeLearner">Fulltime Learner</option>
+                                <option value="PreferNotToSay">Prefer Not to Say</option>
+                                <option>Other</option>
+                            </select>
+            </div>
+            <div class="form-group">
+                <p>Would you recommend freeCodeCamp to a friend?</p>
+                <label>
+                   <input type="radio" value="definetly" name="choice" class="radios" />
+                
+                  Definetly
                 </label>
-            </div>
-            <div class="form-group">
-                <label>Would you recommend freeCodeCamp to a friend?
-                    <input type="radio" value="definetly" name="choice" /><label>Definetly</label>
-                <input type="radio" value="maybe" name="choice" /><label>Maybe</label>
-                <input type="radio" value="not-sure" name="choice" /><label>Not Sure</label>
+                <label>
+                    <input type="radio" value="maybe" name="choice" class="radios" />
+                        Maybe
                 </label>
+                <label>
+                  <input type="radio" value="not-sure" name="choice" class="radios" />
+                        Not Sure
+                </label>
+
             </div>
             <div class="form-group">
 
                 <p>What is your favorite feature of freeCodeCamp?</p>
-                <select id="dropdown">
-                        <option>Select An Option</option>
-                        <option>Challenges</option>
-                        <option>Projects</option>
-                        <option>Community</option>
-                        <option>Open Source</option>
-                    </select>
+                <select id="dropdown" class="inputs">
+                            <option value="" disabled selected value>Select An Option</option>
+                            <option value="Challenges">Challenges</option>
+                            <option value="Projects">Projects</option>
+                            <option value="Community">Community</option>
+                            <option value="OpenSource">Open Source</option>
+                </select>
 
             </div>
             <div class="form-group">
 
                 <p>What would you like to see improved? <em>(Check all that apply)</em></p>
-                <input type="checkbox" Value="Front" /><label> Front-End Projects</label>
-                <input type="checkbox" Value="Back" /><label> Back-end Projects</label>
-                <input type="checkbox" Value="Data" /><label> Data Visualization</label>
-                <input type="checkbox" Value="Challenges" /><label> Challenges</label>
-                <input type="checkbox" Value="Open" /><label> Open Source Community</label>
-                <input type="checkbox" Value="Gitter" /><label> Gitter help rooms</label>
-                <input type="checkbox" Value="Videos" /><label> Videos</label>
-                <input type="checkbox" Value="City" /><label> City Meetups</label>
-                <input type="checkbox" Value="Wiki" /><label> Wiki</label>
-                <input type="checkbox" Value="Forum" /><label> Forum</label>
-                <input type="checkbox" Value="Additional" /><label> Additional Courses</label>
+                <label>
+                  <input type="checkbox" Value="Front" class="checkboxes" /> Front-End Projects
+                </label>
+                <label>
+                 <input type="checkbox" Value="Back" class="checkboxes" /> Back-end Projects
+                </label>
+                <label>
+                 <input type="checkbox" Value="Data" class="checkboxes" /> Data Visualization
+               </label>
+                <label> 
+                 <input type="checkbox" Value="Challenges" class="checkboxes" />Challenges
+               </label>
+                <label>
+                 <input type="checkbox" Value="Open" class="checkboxes" /> Open Source Community
+              </label>
+                <label>
+                <input type="checkbox" Value="Gitter" class="checkboxes" />Gitter help rooms
+              </label>
+                <label> 
+                <input type="checkbox" Value="Videos" class="checkboxes" /> Videos
+              </label>
+                <label>
+                <input type="checkbox" Value="City" class="checkboxes" /> City Meetups
+              </label>
+                <label> 
+                <input type="checkbox" Value="Wiki" class="checkboxes" /> Wiki
+              </label>
+                <label>
+                <input type="checkbox" Value="Forum" class="checkboxes" /> Forum
+              </label>
+                <label>
+                <input type="checkbox" Value="Additional" class="checkboxes" /> Additional Courses
+              </label>
             </div>
             <div class="form-group">
-                <p>Any comments or suggestions?</p><textarea placeholder="Enter Your comment here..."></textarea>
+                <p>Any comments or suggestions?</p><textarea placeholder="Enter Your comment here..." class="txtarea"></textarea>
             </div>
             <div class="form-group">
-                <input id="submit" type="submit" />
+                <input id="submit" type="submit" class="button" />
             </div>
         </form>
     </div>
 </body>
-
-
-
-
-
-
 
 </html>
